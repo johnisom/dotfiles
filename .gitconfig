@@ -1,0 +1,13 @@
+[user]
+	name = John Isom
+	email = John.Isom2001@gmail.com
+[color]
+	ui = auto
+[merge]
+	conflictstyle = diff3
+[core]
+	autorcrlf = true
+        editor = emacsclient -c -t
+[credential]
+	helper = store
+	helper = cache
