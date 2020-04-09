@@ -10,7 +10,7 @@ SHELL=/bin/sh
 * ^From.*john.isom2001
 myself
 
-:0 c:
+:0:
 * ^From.*launchschool
 * ^From.*github
 * ^From.*codewars
