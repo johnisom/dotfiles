@@ -53,9 +53,6 @@ alias LS='lsc'
 
 alias tm='$HOME/time_manager/time_manager.py'
 
-alias psql_start='$HOME/psql_startup.sh'
-alias sq='psql'
-
 alias emc="emacsclient -t"
 alias emsd="emacs-snapshot --daemon"
 alias ems="emacs-snapshot"
