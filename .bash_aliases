@@ -53,11 +53,16 @@ alias LS='lsc'
 
 alias tm='$HOME/time_manager/time_manager.py'
 
-alias emc="emacsclient -t"
-alias emsd="emacs-snapshot --daemon"
-alias ems="emacs-snapshot"
+alias emct="emacsclient -t"
+alias emc="emct"
+alias emcw="emacsclient -c"
+alias emd="emacs --daemon"
+alias em="emacs"
 alias kill-emacs-daemon="emacsclient -e \"(kill-emacs)\""
 alias kemd="kill-emacs-daemon"
 # kemd is k added to emsd, standing for (k)ill (em)acs (d)aemon
 
 alias tmv="tm view 1"
+
+# Because it's easier to type
+alias py="python3"

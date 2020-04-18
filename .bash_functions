@@ -45,3 +45,12 @@ git-sed-commit () {
 
     git log -1 --pretty=format:"%s" | sed "$cmd" | git commit -F -
 }
+
+# For “A Common-Sense Guide…” chapter exercises
+txte () {
+    log10=$(echo "l($1) / l(10) + 1" | bc -l)
+    trunclog10=$(echo "scale=0; $log10 / 1" | bc)
+    for i in $(seq -f "%0$(echo $trunclog10)g" 1 $1); do
+        echo -e "Exercise $i\n" > $i.txt
+    done
+}
