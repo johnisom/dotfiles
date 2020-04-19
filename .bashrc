@@ -136,3 +136,4 @@ export TERM="xterm-256color"
 export EDITOR="emacsclient -c -t"
 export VISUAL='emacsclient -c -a ""'
 export ALTERNATE_EDITOR="vim"
+source "/etc/profile.d/rvm.sh"
