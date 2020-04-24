@@ -85,6 +85,6 @@ Plug 'mxw/vim-jsx'
 call plug#end()
 
 " For Rigel theme
-set termguicolors
-syntax enable
-colorscheme rigel
+"set termguicolors
+"syntax enable
+"colorscheme rigel

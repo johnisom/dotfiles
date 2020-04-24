@@ -1,0 +1,69 @@
+!! Colorscheme -- Rigel
+
+! special
+URxvt.foreground: #E6E6DC
+URxvt.background: [93]#002634
+URxvt.cursorColor: #FFCC1B
+
+! black
+URxvt.color0: #00384D
+URxvt.color8: #517F8D
+
+! red
+URxvt.color1: #C43061
+URxvt.color9: #FF5A67
+
+! green
+URxvt.color2: #7FC06E
+URxvt.color10: #9CF087
+
+! yellow
+URxvt.color3: #F08E48
+URxvt.color11: #FFCC1B
+
+! blue
+URxvt.color4: #1C8DB2
+URxvt.color12: #7EB2DD
+
+! magenta
+URxvt.color5: #C694FF
+URxvt.color13: #FB94FF
+
+! cyan
+URxvt.color6: #00CCCC
+URxvt.color14: #00FFFF
+
+! white
+URxvt.color7: #77929E
+URxvt.color15: #B7CFF9
+
+!! URxvt Apperance
+URxvt.font: xft:UbuntuMono:style=Regular:size=14
+URxvt.boldFont: xft:UbuntuMono:style=Bold:size=14
+URxvt.italicFont: xft:UbuntuMono:style=Italic:size=14
+URxvt.boldItalicfont: xft:UbuntuMono:style=BoldItalic:size=14
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 80x24
+URxvt.internalBorder: 0
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 32
+URxvt.iso14755: false
+
+!! Copy Paste & Other Extensions
+URxvt.copyCommand: xclip -i
+URxvt.pasteCommand: xclip -o
+URxvt.urlLauncher: firefox
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+
+!! Login Shell, Environment Variables, and Other Config
+URxvt.loginShell: true
+URxvt.scrollWithBuffer: true
+URxvt.fading: 3
+URxvt.visualBell: true
