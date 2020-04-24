@@ -126,9 +126,6 @@ shopt -s globstar
 
 [[ -f "$HOME/.bash_functions" ]] && source "$HOME/.bash_functions"
 
-# For exercism
-export PATH="$PATH:$HOME/bin"
-
 # For tmux colors
 export TERM="xterm-256color"
 
@@ -136,4 +133,3 @@ export TERM="xterm-256color"
 export EDITOR="emacsclient -c -t"
 export VISUAL='emacsclient -c -a ""'
 export ALTERNATE_EDITOR="vim"
-source "/etc/profile.d/rvm.sh"
