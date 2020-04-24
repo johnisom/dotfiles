@@ -60,3 +60,31 @@ endif
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Taken from stackoverflow answer
+
+let &t_SI = "\e[6 q"
+let &t_SR = "\e[4 q"
+let &t_EI = "\e[1 q"
+
+" optional reset cursor on start:
+" augroup myCmds
+" au!
+" autocmd VimEnter * silent !echo -ne "\e[2 q"
+" augroup END
+
+" For the vim plugin system
+
+call plug#begin('~/.vim/plugged')
+
+" For Rigel theme
+Plug 'Rigellute/rigel'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+call plug#end()
+
+" For Rigel theme
+set termguicolors
+syntax enable
+colorscheme rigel
