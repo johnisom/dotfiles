@@ -2,7 +2,7 @@
 
 ! special
 URxvt.foreground: #E6E6DC
-URxvt.background: [93]#002634
+URxvt.background: [85]#002634
 URxvt.cursorColor: #FFCC1B
 
 ! black
@@ -38,10 +38,10 @@ URxvt.color7: #77929E
 URxvt.color15: #B7CFF9
 
 !! URxvt Apperance
-URxvt.font: xft:UbuntuMono:style=Regular:size=14
-URxvt.boldFont: xft:UbuntuMono:style=Bold:size=14
-URxvt.italicFont: xft:UbuntuMono:style=Italic:size=14
-URxvt.boldItalicfont: xft:UbuntuMono:style=BoldItalic:size=14
+URxvt.font: xft:xos4 Terminus:style=Regular:size=11
+URxvt.boldFont: xft:xos4 Terminus:style=Bold:size=11
+URxvt.italicFont: xft:xos4 Terminus:style=Italic:size=11
+URxvt.boldItalicfont: xft:xos4 Terminus:style=BoldItalic:size=11
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 80x24
@@ -66,4 +66,4 @@ URxvt.urlButton: 1
 URxvt.loginShell: true
 URxvt.scrollWithBuffer: true
 URxvt.fading: 3
-URxvt.visualBell: true
+URxvt.visualBell: false

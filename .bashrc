@@ -133,3 +133,6 @@ export TERM="xterm-256color"
 export EDITOR="emacsclient -c -t"
 export VISUAL='emacsclient -c -a ""'
 export ALTERNATE_EDITOR="vim"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
