@@ -7,7 +7,7 @@
 	conflictstyle = diff3
 [core]
 	autorcrlf = true
-        editor = emacsclient -c -t
+        editor = nvim
 [credential]
 	helper = store
 	helper = cache

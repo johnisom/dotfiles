@@ -126,13 +126,5 @@ shopt -s globstar
 
 [[ -f "$HOME/.bash_functions" ]] && source "$HOME/.bash_functions"
 
-# For tmux colors
-export TERM="xterm-256color"
-
-# Default editors for editing
-export EDITOR="emacsclient -c -t"
-export VISUAL='emacsclient -c -a ""'
-export ALTERNATE_EDITOR="vim"
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
