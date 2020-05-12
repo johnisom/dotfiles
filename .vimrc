@@ -10,7 +10,7 @@ if v:progname =~? "evim"
 endif
 
 " Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
+"source $VIMRUNTIME/defaults.vim
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -55,7 +55,7 @@ if has('syntax') && has('eval')
 endif
 
 
-"	My portion
+" My portion
 
 set tabstop=2
 set shiftwidth=2
@@ -75,14 +75,14 @@ let &t_EI = "\e[1 q"
 
 " For the vim plugin system
 
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
 
 " For Rigel theme
-Plug 'Rigellute/rigel'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+"Plug 'Rigellute/rigel'
+"Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
 
-call plug#end()
+"call plug#end()
 
 " For Rigel theme
 "set termguicolors
