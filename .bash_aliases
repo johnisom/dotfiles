@@ -71,3 +71,7 @@ alias ddg="ddgr -n 4"
 
 # restart spotifyd service
 alias rs="systemctl --user restart spotifyd.service"
+
+# For the linux tty
+alias tty-rigel="setvtrgb $HOME/rigel-vtrgb && clear"
+alias tty-normal="setvtrgb /etc/console-setup/vtrgb && clear"

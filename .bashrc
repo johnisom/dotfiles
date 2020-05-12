@@ -126,3 +126,7 @@ shopt -s globstar
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+if [ "$TERM" == "linux" ]; then
+  PROMPT_COMMAND='echo -en "\e[?16;0;200c"'
+fi
