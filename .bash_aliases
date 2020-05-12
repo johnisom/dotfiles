@@ -65,3 +65,9 @@ alias tmv="tm view 1"
 
 # Because it's easier to type
 alias py="python3"
+
+# ddgr (duckduckgoer) with only 4 results per page
+alias ddg="ddgr -n 4"
+
+# restart spotifyd service
+alias rs="systemctl --user restart spotifyd.service"

@@ -122,8 +122,6 @@ fi
 
 shopt -s globstar
 
-#export PS1="\[\033[1;35m\]\t\[\033[m\] \[\033[1;34m\]\u\[\033[m\] \[\033[0;36m\]@\[\033[m\] \[\033[1;31m\]\W\[\033[m\]\n\[\033[1;36m\]\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\[\033[m\] \[\033[0;33m\]\$\[\033[m\] "
-
 [[ -f "$HOME/.bash_functions" ]] && source "$HOME/.bash_functions"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
