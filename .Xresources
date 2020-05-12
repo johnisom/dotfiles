@@ -1,47 +1,47 @@
 !! Colorscheme -- Rigel
 
 ! special
-URxvt.foreground: #E6E6DC
-URxvt.background: [85]#002634
-URxvt.cursorColor: #FFCC1B
+URxvt.theme.Rigel.foreground: #E6E6DC
+URxvt.theme.Rigel.background: [85]#002634
+URxvt.theme.Rigel.cursorColor: #FFCC1B
 
 ! black
-URxvt.color0: #00384D
-URxvt.color8: #517F8D
+URxvt.theme.Rigel.color0: #00384D
+URxvt.theme.Rigel.color8: #517F8D
 
 ! red
-URxvt.color1: #C43061
-URxvt.color9: #FF5A67
+URxvt.theme.Rigel.color1: #C43061
+URxvt.theme.Rigel.color9: #FF5A67
 
 ! green
-URxvt.color2: #7FC06E
-URxvt.color10: #9CF087
+URxvt.theme.Rigel.color2: #7FC06E
+URxvt.theme.Rigel.color10: #9CF087
 
 ! yellow
-URxvt.color3: #F08E48
-URxvt.color11: #FFCC1B
+URxvt.theme.Rigel.color3: #F08E48
+URxvt.theme.Rigel.color11: #FFCC1B
 
 ! blue
-URxvt.color4: #1C8DB2
-URxvt.color12: #7EB2DD
+URxvt.theme.Rigel.color4: #1C8DB2
+URxvt.theme.Rigel.color12: #7EB2DD
 
 ! magenta
-URxvt.color5: #C694FF
-URxvt.color13: #FB94FF
+URxvt.theme.Rigel.color5: #C694FF
+URxvt.theme.Rigel.color13: #FB94FF
 
 ! cyan
-URxvt.color6: #00CCCC
-URxvt.color14: #00FFFF
+URxvt.theme.Rigel.color6: #00CCCC
+URxvt.theme.Rigel.color14: #00FFFF
 
 ! white
-URxvt.color7: #77929E
-URxvt.color15: #B7CFF9
+URxvt.theme.Rigel.color7: #77929E
+URxvt.theme.Rigel.color15: #B7CFF9
 
 !! URxvt Apperance
-URxvt.font: xft:UbuntuMono:style=Regular:size=11
-URxvt.boldFont: xft:UbuntuMono:style=Bold:size=11
-URxvt.italicFont: xft:UbuntuMono:style=Italic:size=11
-URxvt.boldItalicfont: xft:UbuntuMono:style=BoldItalic:size=11
+URxvt.font: xft:Terminus (TTF):style=Regular:size=12
+URxvt.boldFont: xft:Terminus (TTF):style=Regular:size=12
+URxvt.italicFont: xft:Terminus (TTF):style=Regular:size=12
+URxvt.boldItalicfont: xft:Terminus (TTF):style=Regular:size=12
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 80x24
@@ -67,3 +67,6 @@ URxvt.loginShell: true
 URxvt.scrollWithBuffer: true
 URxvt.fading: 3
 URxvt.visualBell: false
+
+!! Theme extension
+URxvt.perl-ext-common: theme
