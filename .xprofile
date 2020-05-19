@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# My personal xprofile to be executed on xinit
+
+xset r rate 200 55
+xinput set-prop 12 311 1
+
+# Background
+/home/john/.local/bin/randomize-wallpapers 900

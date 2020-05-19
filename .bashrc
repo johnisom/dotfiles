@@ -130,3 +130,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 if [ "$TERM" == "linux" ]; then
   PROMPT_COMMAND='echo -en "\e[?16;0;200c"'
 fi
+
+# For a pretty terminal on open
+/home/john/.local/bin/pfetch
+
+export VISUAL="nvim"
+export EDITOR="nvim"
