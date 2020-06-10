@@ -4,6 +4,7 @@
 
 xset r rate 200 55
 xinput set-prop 12 311 1
+xinput set-prop 12 303 1
 
-# Background
-/home/john/.local/bin/randomize-wallpapers 900
+# Fonts
+xset +fp /home/john/.local/share/fonts/

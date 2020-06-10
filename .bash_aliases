@@ -48,10 +48,8 @@ alias gfl='git reflog'
 
 alias gsc='git-sed-commit'
 
-alias lsc='cdls $HOME/development/LS/Capstone/prep/'
+alias lsc='cdls $HOME/development/LS/Capstone/system-design'
 alias LS='lsc'
-
-alias tm='$HOME/time_manager/time_manager.py'
 
 alias emct="emacsclient -t"
 alias emc="emct"
@@ -71,6 +69,7 @@ alias ddg="ddgr -n 4"
 
 # restart spotifyd service
 alias rs="systemctl --user restart spotifyd.service"
+alias rspt="rs && spt"
 
 # For the linux tty
 alias tty-rigel="setvtrgb $HOME/rigel-vtrgb && clear"

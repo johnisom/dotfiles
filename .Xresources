@@ -1,4 +1,136 @@
-!! Colorscheme -- Rigel
+!          !!!!!!!!!!!!!!!!!!!!!!!!!!
+!          !!!!                  !!!!
+!          !!!!   Colorschemes   !!!!
+!          !!!!                  !!!!
+!          !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!                  !!!!!!!!!!!!
+!                  !! Custom !!
+!                  !!!!!!!!!!!!
+
+! special
+!URxvt.theme.Custom.foreground: #DFDFDF
+!URxvt.theme.Custom.background: [85]#222222
+!URxvt.theme.Custom.cursorColor: #FFB52A
+
+! black
+!URxvt.theme.Custom.color0: #000000
+!URxvt.theme.Custom.color8: #333333
+
+! red
+!URxvt.theme.Custom.color1: #
+!URxvt.theme.Custom.color9: #
+
+! green
+!URxvt.theme.Custom.color2: #
+!URxvt.theme.Custom.color10: #
+
+! yellow
+!URxvt.theme.Custom.color3: #
+!URxvt.theme.Custom.color11: #
+
+! blue
+!URxvt.theme.Custom.color4: #
+!URxvt.theme.Custom.color12: #
+
+! magenta
+!URxvt.theme.Custom.color5: #
+!URxvt.theme.Custom.color13: #
+
+! cyan
+!URxvt.theme.Custom.color6: #
+!URxvt.theme.Custom.color14: #
+
+! white
+!URxvt.theme.Custom.color7: #
+!URxvt.theme.Custom.color15: #
+
+
+!                  !!!!!!!!!!!!!!!!
+!                  !! Vimix Ruby !!
+!                  !!!!!!!!!!!!!!!!
+
+! special
+URxvt.theme.Vimix-Ruby.foreground: #EAEAEA
+URxvt.theme.Vimix-Ruby.background: #282828
+URxvt.theme.Vimix-Ruby.cursorColor: #F0544C
+
+! black
+URxvt.theme.Vimix-Ruby.color0: #282828
+URxvt.theme.Vimix-Ruby.color8: #303030
+
+! red
+URxvt.theme.Vimix-Ruby.color1: #F0544C
+URxvt.theme.Vimix-Ruby.color9: #F1645C
+
+! green
+URxvt.theme.Vimix-Ruby.color2: #00C853
+URxvt.theme.Vimix-Ruby.color10: #17CD63
+
+! yellow
+URxvt.theme.Vimix-Ruby.color3: #EAB937
+URxvt.theme.Vimix-Ruby.color11: #F3C847
+
+! blue
+URxvt.theme.Vimix-Ruby.color4: #5D8AC3
+URxvt.theme.Vimix-Ruby.color12: #4586D8
+
+! magenta
+URxvt.theme.Vimix-Ruby.color5: #B045CD
+URxvt.theme.Vimix-Ruby.color13: #B756D2
+
+! cyan
+URxvt.theme.Vimix-Ruby.color6: #00CCCC
+URxvt.theme.Vimix-Ruby.color14: #3FD9D9
+
+! white
+URxvt.theme.Vimix-Ruby.color7: #EAEAEA
+URxvt.theme.Vimix-Ruby.color15: #FFFFFF
+
+!                  !!!!!!!!!!!!!!!!!!!
+!                  !! Monokai Night !!
+!                  !!!!!!!!!!!!!!!!!!!
+
+! special
+URxvt.theme.Monokai-Night.foreground: #F8F8F8
+URxvt.theme.Monokai-Night.background: #1F1F1F
+!URxvt.theme.Monokai-Night.cursorColor: #
+
+! black
+URxvt.theme.Monokai-Night.color0: #1F1F1F
+URxvt.theme.Monokai-Night.color8: #75715E
+
+! red
+URxvt.theme.Monokai-Night.color1: #F92672
+URxvt.theme.Monokai-Night.color9: #F92672
+
+! green
+URxvt.theme.Monokai-Night.color2: #A6E22E
+URxvt.theme.Monokai-Night.color10: #A6E22E
+
+! yellow
+URxvt.theme.Monokai-Night.color3: #E6DB74
+URxvt.theme.Monokai-Night.color11: #E6DB74
+
+! blue
+URxvt.theme.Monokai-Night.color4: #6699DF
+URxvt.theme.Monokai-Night.color12: #66D9EF
+
+! magenta
+URxvt.theme.Monokai-Night.color5: #AE81FF
+URxvt.theme.Monokai-Night.color13: #AE81FF
+
+! cyan
+URxvt.theme.Monokai-Night.color6: #E69F66
+URxvt.theme.Monokai-Night.color14: #E69F66
+
+! white
+URxvt.theme.Monokai-Night.color7: #F8F8F2
+URxvt.theme.Monokai-Night.color15: #F8F8F2
+
+!                  !!!!!!!!!!!
+!                  !! Rigel !!
+!                  !!!!!!!!!!!
 
 ! special
 URxvt.theme.Rigel.foreground: #E6E6DC
