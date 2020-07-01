@@ -17,7 +17,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE=5000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -47,12 +47,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -116,9 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-##################
-# Taken from WSL #
-##################
+############
+# My Stuff #
+############
 
 shopt -s globstar
 
@@ -127,12 +127,13 @@ shopt -s globstar
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Keep neovim from clobbering the cursor
 if [ "$TERM" == "linux" ]; then
-  PROMPT_COMMAND='echo -en "\e[?16;0;200c"'
+  PROMPT_COMMAND='echo -en "\e[?0;0;0c"'
 fi
 
 # For a pretty terminal on open
-/home/john/.local/bin/pfetch
+# /home/john/.local/bin/pfetch
 
-export VISUAL="nvim"
-export EDITOR="nvim"
+export VISUAL="kak"
+export EDITOR="kak"

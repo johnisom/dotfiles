@@ -56,8 +56,8 @@ URxvt.theme.Vimix-Ruby.background: #282828
 URxvt.theme.Vimix-Ruby.cursorColor: #F0544C
 
 ! black
-URxvt.theme.Vimix-Ruby.color0: #282828
-URxvt.theme.Vimix-Ruby.color8: #303030
+URxvt.theme.Vimix-Ruby.color0: #303030
+URxvt.theme.Vimix-Ruby.color8: #424242
 
 ! red
 URxvt.theme.Vimix-Ruby.color1: #F0544C
@@ -171,9 +171,9 @@ URxvt.theme.Rigel.color15: #B7CFF9
 
 !! URxvt Apperance
 URxvt.font: xft:Terminus (TTF):style=Regular:size=12
-URxvt.boldFont: xft:Terminus (TTF):style=Regular:size=12
+URxvt.boldFont: xft:Terminus (TTF):style=Bold:size=12
 URxvt.italicFont: xft:Terminus (TTF):style=Italic:size=12
-URxvt.boldItalicfont: xft:Terminus (TTF):style=Italic:size=12
+URxvt.boldItalicfont: xft:Terminus (TTF):style=BoldItalic:size=12
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 80x24

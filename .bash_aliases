@@ -48,7 +48,7 @@ alias gfl='git reflog'
 
 alias gsc='git-sed-commit'
 
-alias lsc='cdls $HOME/development/LS/Capstone/system-design'
+alias lsc='cdls $HOME/development/LS/Capstone/frameworks/fullstack/reaction/'
 alias LS='lsc'
 
 alias emct="emacsclient -t"
