@@ -7,7 +7,7 @@
 	conflictstyle = diff3
 [core]
 	autorcrlf = true
-        editor = nvim
+        editor = kak
 [credential]
 	helper = store
 	helper = cache

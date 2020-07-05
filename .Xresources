@@ -4,47 +4,6 @@
 !          !!!!                  !!!!
 !          !!!!!!!!!!!!!!!!!!!!!!!!!!
 
-!                  !!!!!!!!!!!!
-!                  !! Custom !!
-!                  !!!!!!!!!!!!
-
-! special
-!URxvt.theme.Custom.foreground: #DFDFDF
-!URxvt.theme.Custom.background: [85]#222222
-!URxvt.theme.Custom.cursorColor: #FFB52A
-
-! black
-!URxvt.theme.Custom.color0: #000000
-!URxvt.theme.Custom.color8: #333333
-
-! red
-!URxvt.theme.Custom.color1: #
-!URxvt.theme.Custom.color9: #
-
-! green
-!URxvt.theme.Custom.color2: #
-!URxvt.theme.Custom.color10: #
-
-! yellow
-!URxvt.theme.Custom.color3: #
-!URxvt.theme.Custom.color11: #
-
-! blue
-!URxvt.theme.Custom.color4: #
-!URxvt.theme.Custom.color12: #
-
-! magenta
-!URxvt.theme.Custom.color5: #
-!URxvt.theme.Custom.color13: #
-
-! cyan
-!URxvt.theme.Custom.color6: #
-!URxvt.theme.Custom.color14: #
-
-! white
-!URxvt.theme.Custom.color7: #
-!URxvt.theme.Custom.color15: #
-
 
 !                  !!!!!!!!!!!!!!!!
 !                  !! Vimix Ruby !!
@@ -52,7 +11,7 @@
 
 ! special
 URxvt.theme.Vimix-Ruby.foreground: #EAEAEA
-URxvt.theme.Vimix-Ruby.background: #282828
+URxvt.theme.Vimix-Ruby.background: [85]#282828
 URxvt.theme.Vimix-Ruby.cursorColor: #F0544C
 
 ! black
@@ -146,59 +105,59 @@ URxvt.theme.Rigel.color1: #C43061
 URxvt.theme.Rigel.color9: #FF5A67
 
 ! green
-URxvt.theme.Rigel.color2: #7FC06E
+URxvt.theme.Rigel.color2:  #7FC06E
 URxvt.theme.Rigel.color10: #9CF087
 
 ! yellow
-URxvt.theme.Rigel.color3: #F08E48
+URxvt.theme.Rigel.color3:  #F08E48
 URxvt.theme.Rigel.color11: #FFCC1B
 
 ! blue
-URxvt.theme.Rigel.color4: #1C8DB2
+URxvt.theme.Rigel.color4:  #1C8DB2
 URxvt.theme.Rigel.color12: #7EB2DD
 
 ! magenta
-URxvt.theme.Rigel.color5: #C694FF
+URxvt.theme.Rigel.color5:  #C694FF
 URxvt.theme.Rigel.color13: #FB94FF
 
 ! cyan
-URxvt.theme.Rigel.color6: #00CCCC
+URxvt.theme.Rigel.color6:  #00CCCC
 URxvt.theme.Rigel.color14: #00FFFF
 
 ! white
-URxvt.theme.Rigel.color7: #77929E
+URxvt.theme.Rigel.color7:  #77929E
 URxvt.theme.Rigel.color15: #B7CFF9
 
 !! URxvt Apperance
-URxvt.font: xft:Terminus (TTF):style=Regular:size=12
-URxvt.boldFont: xft:Terminus (TTF):style=Bold:size=12
-URxvt.italicFont: xft:Terminus (TTF):style=Italic:size=12
-URxvt.boldItalicfont: xft:Terminus (TTF):style=BoldItalic:size=12
-URxvt.letterSpace: 0
-URxvt.lineSpace: 0
-URxvt.geometry: 80x24
-URxvt.internalBorder: 0
-URxvt.cursorBlink: true
+URxvt.font:            xft:Terminus (TTF):style=Regular:size=12
+URxvt.boldFont:        xft:Terminus (TTF):style=Bold:size=12
+URxvt.italicFont:      xft:Terminus (TTF):style=Italic:size=12
+URxvt.boldItalicfont:  xft:Terminus (TTF):style=BoldItalic:size=12
+URxvt.letterSpace:     0
+URxvt.lineSpace:       0
+URxvt.geometry:        80x24
+URxvt.internalBorder:  0
+URxvt.cursorBlink:     true
 URxvt.cursorUnderline: false
-URxvt.saveline: 2048
-URxvt.scrollBar: false
+URxvt.saveline:        2048
+URxvt.scrollBar:       false
 URxvt.scrollBar_right: false
-URxvt.urgentOnBell: true
-URxvt.depth: 32
-URxvt.iso14755: false
+URxvt.urgentOnBell:    true
+URxvt.depth:           32
+URxvt.iso14755:        false
 
 !! Copy Paste & Other Extensions
-URxvt.copyCommand: xclip -i
-URxvt.pasteCommand: xclip -o
-URxvt.urlLauncher: firefox
+URxvt.copyCommand:   xclip -i
+URxvt.pasteCommand:  xclip -o
+URxvt.urlLauncher:   firefox
 URxvt.underlineURLs: true
-URxvt.urlButton: 1
+URxvt.urlButton:     1
 
 !! Login Shell, Environment Variables, and Other Config
-URxvt.loginShell: true
+URxvt.loginShell:       true
 URxvt.scrollWithBuffer: true
-URxvt.fading: 3
-URxvt.visualBell: false
+URxvt.fading:           3
+URxvt.visualBell:       false
 
 !! Theme extension
 URxvt.perl-ext-common: theme

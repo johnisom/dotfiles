@@ -7,7 +7,7 @@ touchpad_id=$(xinput | grep 'Synaptics' | cut -f2 | cut -d = -f2)
 natural_scrolling_id=$(xinput list-props $touchpad_id | head -4 | tail -1 | colrm 1 34 | colrm 4)
 tapping_id=$(xinput list-props $touchpad_id | head -12 | tail -1 | colrm 1 44 | colrm 4)
 
-if [ $(xrandr --query | grep " connected" | wc -l) -eq "2" ]; then
+if [[ $(xrandr --query | grep " connected" | wc -l) == 2 ]]; then
     # Enable 2nd monitor
     /home/john/.screenlayout/dual-monitor.sh
 
