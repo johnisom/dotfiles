@@ -140,3 +140,4 @@ fi
 
 export VISUAL="kak"
 export EDITOR="kak"
+export PAGER="most"
