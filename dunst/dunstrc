@@ -1,0 +1,25 @@
+[global]
+follow = mouse
+padding = 8
+frame_color = "#aaaaaa"
+separator_color = auto
+font = "Terminus (TTF) 12"
+markup = full
+format = "<b>(%a)</b>: %s\n%b"
+word_wrap = yes
+frame_width = 0
+geometry = "400x20+483+10"
+alignment = center
+separator_height = 1
+
+[urgency_low]
+background = "#282828"
+foreground = "#999999"
+
+[urgency_normal]
+background = "#303030"
+foreground = "#eaeaea"
+
+[urgency_critical]
+background = "#f0544c"
+foreground = "#ffcccc"

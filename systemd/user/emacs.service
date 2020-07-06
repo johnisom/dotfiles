@@ -1,0 +1,12 @@
+[Unit]
+Description=Emacs Snapshot Daemon
+Documentation=https://www.gnu.org/software/emacs/documentation.html
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/emacs --daemon
+ExecStop=/usr/bin/emacsclient -e "(kill-emacs)"
+Restart=always
+
+[Install]
+WantedBy=default.target

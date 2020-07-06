@@ -1,0 +1,11 @@
+[Unit]
+Description=Guake Terminal
+Documentation=http://guake.org/
+
+[Service]
+ExecStart=/usr/bin/guake
+ExecStop=/usr/bin/guake -q
+Restart=always
+
+[Install]
+WantedBy=default.target

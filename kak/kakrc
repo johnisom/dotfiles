@@ -1,0 +1,61 @@
+# Plugins
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+
+## plug -- Plugin manager for Kakoune editor
+plug "andreyorst/plug.kak" noload
+
+## smarttab -- Automatic handling different styles of indentation and alignment
+plug "andreyorst/smarttab.kak" defer smarttab %{
+    set-option global softtabstop 2
+} config %{
+    hook global WinSetOption filetype=(.*) expandtab
+}
+
+## auto-pairs -- Auto-paired characters for Kakoune
+plug "alexherbo2/auto-pairs.kak"
+
+## surround -- Surround pairs as-you-type for Kakoune
+plug "alexherbo2/surround.kak"
+
+## move-line -- Kakoune plugin to move lines without `xdp`
+plug "alexherbo2/move-line.kak" config %{
+    map global normal "'" ': move-line-below<ret>'
+    map global normal "<a-'>" ': move-line-above<ret>'
+}
+
+## kak-lsp -- Kakoune Language Server Protocol Client
+plug "ul/kak-lsp" do %{
+    cargo install --locked --force --path .
+}
+
+
+# Indent Width
+set-option global indentwidth 2
+
+# Highlighters
+#
+## Line numbers
+add-highlighter global/ number-lines -hlcursor
+## Wrap long lines around
+add-highlighter global/ wrap
+
+# Colorschemes
+#
+## Default
+colorscheme dracula
+#
+## Plugins
+### kakoune-selenized -- Selenized themes for Kakoune
+plug "TeddyDD/kakoune-selenized" theme
+### kakoune-colors -- Color schemes for kakoune
+plug "Delapouite/kakoune-colors" theme
+### primer.kak -- Color scheme for Kakoune based on GitHub's Primer design system
+plug "evanrelf/primer.kak" theme
+### nord-kakoune -- Nord Colorscheme for Kakoune
+plug "rubberydub/nord-kakoune" theme
+
+# Javascript & JSX format
+hook global WinSetOption filetype=(javascript) %{
+    set-option buffer formatcmd 'prettier --parser babel'
+    hook buffer -group format BufWritePre .* format
+}

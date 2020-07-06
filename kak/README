@@ -1,0 +1,4 @@
+This directory only holds my kakrc file, not any of the plugins or
+colorschemes. This is because the plugins are git repositories, and I want to
+avoid them. Luckily, All the information you need to know about my plugins and
+colorschemes are in my kakrc file.
