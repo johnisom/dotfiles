@@ -1,11 +1,12 @@
 [global]
 follow = mouse
 padding = 8
+horizontal_padding = 8
 frame_color = "#aaaaaa"
 separator_color = auto
 font = "Terminus (TTF) 12"
 markup = full
-format = "<b>(%a)</b>: %s\n%b"
+format = "<b>(%a)</b>: %s\n\n%b"
 word_wrap = yes
 frame_width = 0
 geometry = "400x20+483+10"
