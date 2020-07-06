@@ -263,7 +263,7 @@ exec picom -b
 # for Polybar
 exec $HOME/.config/polybar/launch.sh
 
-# So I can actually controll the brightness of my screen
+# So I can actually control the brightness of my screen
 bindsym XF86MonBrightnessUp   exec brightness+
 bindsym XF86MonBrightnessDown exec brightness-
 
