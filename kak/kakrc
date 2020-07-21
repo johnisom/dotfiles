@@ -7,6 +7,9 @@ plug "andreyorst/plug.kak" noload
 ## smarttab -- Automatic handling different styles of indentation and alignment
 plug "andreyorst/smarttab.kak" defer smarttab %{
     set-option global softtabstop 2
+    hook global WinSetOption filetype=kak %{
+      set-option window softtabstop 4
+    }
 } config %{
     hook global WinSetOption filetype=(.*) expandtab
 }
@@ -24,13 +27,29 @@ plug "alexherbo2/move-line.kak" config %{
 }
 
 ## kak-lsp -- Kakoune Language Server Protocol Client
-plug "ul/kak-lsp" do %{
-    cargo install --locked --force --path .
-}
+# plug "ul/kak-lsp" do %{
+#     cargo install --locked --force --path .
+# } config %{
+#     eval %sh{kak-lsp --session $kak_session}
+#     hook global WinSetOption filetype=(python|javascript|ruby|bash|json|css|html) %{
+#         lsp-enable-window
+#     }
+# }
+
+## kakoune-smooth-scroll --  Smooth scrolling for Kakoune with inertial movement
+# plug "caksoylar/kakoune-smooth-scroll" config %{
+#     map global normal <c-d> ': smooth-scroll  0.5 20 0<ret>'
+#     map global normal <c-u> ': smooth-scroll -0.5 20 0<ret>'
+#     map global normal <c-f> ': smooth-scroll  1.0 10 0<ret>'
+#     map global normal <c-b> ': smooth-scroll -1.0 10 0<ret>'
+# }
 
 
 # Indent Width
 set-option global indentwidth 2
+hook global WinSetOption filetype=kak %{
+    set-option window indentwidth 4
+}
 
 # Highlighters
 #
@@ -42,7 +61,7 @@ add-highlighter global/ wrap
 # Colorschemes
 #
 ## Default
-colorscheme dracula
+colorscheme mysticaltutor-plain
 #
 ## Plugins
 ### kakoune-selenized -- Selenized themes for Kakoune
@@ -53,9 +72,11 @@ plug "Delapouite/kakoune-colors" theme
 plug "evanrelf/primer.kak" theme
 ### nord-kakoune -- Nord Colorscheme for Kakoune
 plug "rubberydub/nord-kakoune" theme
+### kakoune-mysticaltutor -- Low-contrast flat colorscheme for Kakoune
+plug "caksoylar/kakoune-mysticaltutor" theme
 
 # Javascript & JSX format
-hook global WinSetOption filetype=(javascript) %{
+hook global WinSetOption filetype=javascript %{
     set-option buffer formatcmd 'prettier --parser babel'
     hook buffer -group format BufWritePre .* format
 }

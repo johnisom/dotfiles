@@ -3,8 +3,9 @@ Description=URxvt Daemon
 Documentation=https://linux.die.net/man/1/urxvtd
 
 [Service]
-ExecStart=/usr/bin/urxvtd
-ExecStop=/usr/bin/bash -c "/usr/bin/killall -q urxvtd && rm /home/john/.urxvt/urxvtd-jubuntu"
+Type=forking
+ExecStart=/usr/bin/urxvtd -f
+ExecStop=/usr/bin/urxvtc -k
 Restart=always
 
 [Install]

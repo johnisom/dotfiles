@@ -7,17 +7,36 @@ touchpad_id=$(xinput | grep 'Synaptics' | cut -f2 | cut -d = -f2)
 natural_scrolling_id=$(xinput list-props $touchpad_id | head -4 | tail -1 | colrm 1 34 | colrm 4)
 tapping_id=$(xinput list-props $touchpad_id | head -12 | tail -1 | colrm 1 44 | colrm 4)
 
-if [[ $(xrandr --query | grep " connected" | wc -l) == 2 ]]; then
-    # Enable 2nd monitor
-    /home/john/.screenlayout/dual-monitor.sh
+# Touchpad niceities
+xinput set-prop $touchpad_id $natural_scrolling_id 1
+xinput set-prop $touchpad_id $tapping_id 1
+
+if type xrandr > /dev/null; then
+  declare -a monitors
+  monitors=($(xrandr --query | grep " connected" | cut -d" " -f1))
+
+  if [[ ${#monitors[@]} == 3 ]]; then
+    # Enable all 3 monitors
+    /home/john/.screenlayout/triple-monitor.sh
 
     # Disable touchpad and built-in keyboard
-    xinput disable $keyboard_id # keyboard
-    xinput disable $touchpad_id # touchpad
-else
-    # Touchpad niceities
-    xinput set-prop $touchpad_id $natural_scrolling_id 1 # natural scrolling
-    xinput set-prop $touchpad_id $tapping_id 1 # tapping
+    xinput disable $keyboard_id
+    xinput disable $touchpad_id
+  elif [[ ${#monitors[@]} == 2 && ${monitors[1]} == "DVI-I-1-1" ]]; then
+    # Enable 2nd monitor (portable)
+    /home/john/.screenlayout/dual-usb-horizontal.sh
+
+    # Disable touchpad and built-in keyboard
+    xinput disable $keyboard_id
+    xinput disable $touchpad_id
+  elif [[ ${#monitors[@]} == 2 && ${monitors[1]} == "HDMI-1" ]]; then
+    # Enable 2nd monitor (HDMI)
+    /home/john/.screenlayout/dual-hdmi-vertical.sh
+
+    # Disable touchpad and built-in keyboard
+    xinput disable $keyboard_id
+    xinput disable $touchpad_id
+  fi
 fi
 
 # Keyboard repeat rate
@@ -25,3 +44,4 @@ xset r rate 200 55
 
 # Fonts
 xset +fp /home/john/.local/share/fonts/
+

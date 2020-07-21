@@ -17,7 +17,7 @@ set $alt Mod1
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c '#282828' --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock /home/john/.local/bin/lock.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -105,17 +105,17 @@ set $ws8  "8"
 set $ws9  "9"
 set $ws10 "10: Music"
 
-# Assign workspaces to monitors
-workspace $ws1  output eDP-1
-workspace $ws2  output eDP-1
-workspace $ws3  output eDP-1
-workspace $ws4  output DVI-I-1-1 eDP-1
-workspace $ws5  output eDP-1
-workspace $ws6  output DVI-I-1-1 eDP-1
-workspace $ws7  output DVI-I-1-1 eDP-1
-workspace $ws8  output eDP-1
-workspace $ws9  output eDP-1
-workspace $ws10 output DVI-I-1-1 eDP-1
+# # Assign workspaces to monitors
+# workspace $ws1  output eDP-1
+# workspace $ws2  output eDP-1
+# workspace $ws3  output eDP-1
+# workspace $ws4  output DVI-I-1-1 eDP-1
+# workspace $ws5  output eDP-1
+# workspace $ws6  output DVI-I-1-1 eDP-1
+# workspace $ws7  output DVI-I-1-1 eDP-1
+# workspace $ws8  output eDP-1
+# workspace $ws9  output eDP-1
+# workspace $ws10 output DVI-I-1-1 eDP-1
 
 
 # switch to workspace
@@ -200,14 +200,21 @@ bindsym $mod+r mode "resize"
 
 # Default workspaces
 assign [class="Firefox"]  $ws1
+assign [class="Vivaldi-stable"]  $ws1
+assign [class="Badwolf"]  $ws1
 assign [class="Emacs"]    $ws3
 assign [class="Slack"]    $ws4
 assign [class="zoom"]     $ws5
 assign [title="htop"]     $ws9
+assign [title="ytop"]     $ws9
 assign [title="pipes.sh"] $ws9
+# assign [class="Spotify"]  $ws10 # doesn't work
 assign [title="spt"]      $ws10
 assign [title="vis"]      $ws10
 assign [title="cmatrix"]  $ws10
+
+# For spotify specifically
+for_window [class="Spotify"] move to workspace $ws10 # this is the workaround
 
 # Prettify
 font pango:Terminus (TTF) 12px
@@ -260,21 +267,26 @@ bindsym $mod+Shift+p exec rofi -modi drun   -show drun
 # For a compositor
 exec picom -b
 
-# for Polybar
+# For Polybar
 exec $HOME/.config/polybar/launch.sh
+
+# For Guake terminal
+exec "guake & disown"
 
 # So I can actually control the brightness of my screen
 bindsym XF86MonBrightnessUp   exec brightness+
 bindsym XF86MonBrightnessDown exec brightness-
 
 # Use pause/play and skip buttons
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl --all-players next
+bindsym XF86AudioPrev exec playerctl --all-players previous
+bindsym XF86AudioPlay exec playerctl --all-players play-pause
 
 # Other random button stuffs
 bindsym XF86Calculator exec gnome-calculator
-bindsym XF86Tools      exec i3-sensible-terminal -e "/home/john/.cargo/bin/spt"
+# bindsym XF86Tools      exec i3-sensible-terminal -e "/home/john/.cargo/bin/spt"
+bindsym XF86Tools      exec spotify
+bindsym XF86HomePage   exec firefox
 
 # i3-gaps
 workspace $ws2  gaps inner 8
@@ -283,3 +295,7 @@ workspace $ws10 gaps inner 8
 
 # Toggle gaps for current workspace
 bindsym $mod+g gaps inner current toggle 8
+
+# Change size of gaps
+bindsym $mod+plus  gaps inner current plus  2
+bindsym $mod+minus gaps inner current minus 2

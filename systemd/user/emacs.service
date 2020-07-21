@@ -1,5 +1,5 @@
 [Unit]
-Description=Emacs Snapshot Daemon
+Description=Emacs Daemon
 Documentation=https://www.gnu.org/software/emacs/documentation.html
 
 [Service]
