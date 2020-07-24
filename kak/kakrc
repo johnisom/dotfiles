@@ -14,6 +14,9 @@ plug "andreyorst/smarttab.kak" defer smarttab %{
     hook global WinSetOption filetype=(.*) expandtab
 }
 
+## prelude -- Prelude of shell blocks for Kakoune
+plug "alexherbo2/prelude.kak"
+
 ## auto-pairs -- Auto-paired characters for Kakoune
 plug "alexherbo2/auto-pairs.kak"
 
