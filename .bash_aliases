@@ -74,6 +74,9 @@ alias rspt="rs && spt"
 # restart picom (current version has memory leak)
 alias rpicom="killall -wq picom; picom -b"
 
+# start picom for good minecraft configuration
+alias mpicom="picom --config /dev/null --backend glx --vsync -b"
+
 # For the linux tty
 alias tty-rigel="setvtrgb $HOME/rigel-vtrgb && clear"
 alias tty-normal="setvtrgb /etc/console-setup/vtrgb && clear"

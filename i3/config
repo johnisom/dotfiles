@@ -199,19 +199,21 @@ bindsym $mod+r mode "resize"
 # }
 
 # Default workspaces
-assign [class="Firefox"]  $ws1
-assign [class="Vivaldi-stable"]  $ws1
-assign [class="Badwolf"]  $ws1
-assign [class="Emacs"]    $ws3
-assign [class="Slack"]    $ws4
-assign [class="zoom"]     $ws5
-assign [title="htop"]     $ws9
-assign [title="ytop"]     $ws9
-assign [title="pipes.sh"] $ws9
-# assign [class="Spotify"]  $ws10 # doesn't work
-assign [title="spt"]      $ws10
-assign [title="vis"]      $ws10
-assign [title="cmatrix"]  $ws10
+assign [class="Firefox"]            $ws1
+assign [class="Vivaldi-stable"]     $ws1
+assign [class="Badwolf"]            $ws1
+assign [class="Chromium-browser"]   $ws1
+assign [class="Emacs"]              $ws3
+assign [class="Slack"]              $ws4
+assign [class="zoom"]               $ws5
+assign [class="minecraft-launcher"] $ws6
+assign [class="Minecraft*"]         $ws6
+assign [title="htop"]               $ws9
+assign [title="ytop"]               $ws9
+assign [title="pipes.sh"]           $ws9
+assign [title="spt"]                $ws10
+assign [title="vis"]                $ws10
+assign [title="cmatrix"]            $ws10
 
 # For spotify specifically
 for_window [class="Spotify"] move to workspace $ws10 # this is the workaround
@@ -257,7 +259,8 @@ client.urgent           $urgent-border-color   $urgent-bg-color   $urgent-fg-col
 exec nitrogen --restore
 
 # Firefox
-bindsym Ctrl+$alt+w exec firefox
+# bindsym Ctrl+$alt+w exec firefox
+bindsym Ctrl+$alt+w exec chromium-browser
 
 # Rofi menus
 bindsym $mod+Shift+w exec rofi -modi window -show window

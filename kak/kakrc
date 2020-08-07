@@ -8,7 +8,7 @@ plug "andreyorst/plug.kak" noload
 plug "andreyorst/smarttab.kak" defer smarttab %{
     set-option global softtabstop 2
     hook global WinSetOption filetype=kak %{
-      set-option window softtabstop 4
+        set-option window softtabstop 4
     }
 } config %{
     hook global WinSetOption filetype=(.*) expandtab
@@ -18,7 +18,7 @@ plug "andreyorst/smarttab.kak" defer smarttab %{
 plug "alexherbo2/prelude.kak"
 
 ## auto-pairs -- Auto-paired characters for Kakoune
-plug "alexherbo2/auto-pairs.kak"
+plug "johnisom/auto-pairs.kak"
 
 ## surround -- Surround pairs as-you-type for Kakoune
 plug "alexherbo2/surround.kak"
@@ -27,6 +27,10 @@ plug "alexherbo2/surround.kak"
 plug "alexherbo2/move-line.kak" config %{
     map global normal "'" ': move-line-below<ret>'
     map global normal "<a-'>" ': move-line-above<ret>'
+}
+
+plug "andreyorst/powerline.kak" config %{
+    powerline-start
 }
 
 ## kak-lsp -- Kakoune Language Server Protocol Client
@@ -64,7 +68,7 @@ add-highlighter global/ wrap
 # Colorschemes
 #
 ## Default
-colorscheme mysticaltutor-plain
+colorscheme mysticaltutor
 #
 ## Plugins
 ### kakoune-selenized -- Selenized themes for Kakoune
@@ -77,9 +81,13 @@ plug "evanrelf/primer.kak" theme
 plug "rubberydub/nord-kakoune" theme
 ### kakoune-mysticaltutor -- Low-contrast flat colorscheme for Kakoune
 plug "caksoylar/kakoune-mysticaltutor" theme
+### kakoune-mysticaltutor-powerline -- A port of the Mystical Tutor theme for the powerline plugin
+plug "jordan-yee/kakoune-mysticaltutor-powerline" defer powerline %{
+    powerline-theme mysticaltutor
+}
 
 # Javascript & JSX format
 hook global WinSetOption filetype=javascript %{
     set-option buffer formatcmd 'prettier --parser babel'
-    hook buffer -group format BufWritePre .* format
+    # hook buffer -group format BufWritePre .* format
 }
