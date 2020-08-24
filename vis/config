@@ -1,9 +1,0 @@
-visualizer.spectrum.smoothing.mode=monstercat
-visualizer.monstercat.smoothing.factor=1.3
-visualizer.spectrum.falloff.mode=fill
-visualizer.spectrum.bar.width=1
-visualizer.spectrum.bar.spacing=0
-visualizer.spectrum.character=∎
-visualizer.ellipse.character=∎
-colors.override.terminal=false
-colors.scheme=watermelon
