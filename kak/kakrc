@@ -2,7 +2,7 @@
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 
 ## plug -- Plugin manager for Kakoune editor
-plug "andreyorst/plug.kak" noload
+plug "robertmeta/plug.kak" noload
 
 ## smarttab -- Automatic handling different styles of indentation and alignment
 plug "andreyorst/smarttab.kak" defer smarttab %{
@@ -18,7 +18,7 @@ plug "andreyorst/smarttab.kak" defer smarttab %{
 plug "alexherbo2/prelude.kak"
 
 ## auto-pairs -- Auto-paired characters for Kakoune
-plug "johnisom/auto-pairs.kak"
+plug "alexherbo2/auto-pairs.kak"
 
 ## surround -- Surround pairs as-you-type for Kakoune
 plug "alexherbo2/surround.kak"
@@ -30,28 +30,14 @@ plug "alexherbo2/move-line.kak" config %{
 }
 
 plug "andreyorst/powerline.kak" config %{
-    powerline-start
+    %sh{
+        if [[ $TERM == "linux" ]]; then
+            echo nop
+        else
+            echo powerline-start
+        fi
+    }
 }
-
-## kak-lsp -- Kakoune Language Server Protocol Client
-# plug "ul/kak-lsp" do %{
-#     cargo install --locked --force --path .
-# } config %{
-#     eval %sh{kak-lsp --session $kak_session}
-#     hook global WinSetOption filetype=(python|javascript|ruby|bash|json|css|html) %{
-#         lsp-enable-window
-#     }
-# }
-
-## kakoune-smooth-scroll --  Smooth scrolling for Kakoune with inertial movement
-# plug "caksoylar/kakoune-smooth-scroll" config %{
-#     map global normal <c-d> ': smooth-scroll  0.5 20 0<ret>'
-#     map global normal <c-u> ': smooth-scroll -0.5 20 0<ret>'
-#     map global normal <c-f> ': smooth-scroll  1.0 10 0<ret>'
-#     map global normal <c-b> ': smooth-scroll -1.0 10 0<ret>'
-# }
-
-
 # Indent Width
 set-option global indentwidth 2
 hook global WinSetOption filetype=kak %{
@@ -59,29 +45,33 @@ hook global WinSetOption filetype=kak %{
 }
 
 # Highlighters
-#
-## Line numbers
-add-highlighter global/ number-lines -hlcursor
-## Wrap long lines around
-add-highlighter global/ wrap
+
+hook global ModeChange push:normal:insert %{
+    add-highlighter -override window/line-numbers number-lines -hlcursor
+}
+
+hook global ModeChange pop:insert:normal %{
+    add-highlighter -override window/line-numbers number-lines -hlcursor -relative
+}
+
+add-highlighter global/line-numbers number-lines -hlcursor -relative
+add-highlighter global/line-wrap wrap
 
 # Colorschemes
-#
-## Default
-colorscheme mysticaltutor
-#
-## Plugins
-### kakoune-selenized -- Selenized themes for Kakoune
 plug "TeddyDD/kakoune-selenized" theme
-### kakoune-colors -- Color schemes for kakoune
 plug "Delapouite/kakoune-colors" theme
-### primer.kak -- Color scheme for Kakoune based on GitHub's Primer design system
 plug "evanrelf/primer.kak" theme
-### nord-kakoune -- Nord Colorscheme for Kakoune
 plug "rubberydub/nord-kakoune" theme
-### kakoune-mysticaltutor -- Low-contrast flat colorscheme for Kakoune
-plug "caksoylar/kakoune-mysticaltutor" theme
-### kakoune-mysticaltutor-powerline -- A port of the Mystical Tutor theme for the powerline plugin
+plug "caksoylar/kakoune-mysticaltutor" theme config %{
+    %sh{
+        if [[ $TERM == "linux" ]]; then
+            echo nop
+        else
+            echo colorscheme
+        fi
+    } mysticaltutor
+}
+
 plug "jordan-yee/kakoune-mysticaltutor-powerline" defer powerline %{
     powerline-theme mysticaltutor
 }
@@ -89,5 +79,4 @@ plug "jordan-yee/kakoune-mysticaltutor-powerline" defer powerline %{
 # Javascript & JSX format
 hook global WinSetOption filetype=javascript %{
     set-option buffer formatcmd 'prettier --parser babel'
-    # hook buffer -group format BufWritePre .* format
 }
