@@ -38,6 +38,7 @@ plug "andreyorst/powerline.kak" config %{
         fi
     }
 }
+
 # Indent Width
 set-option global indentwidth 2
 hook global WinSetOption filetype=kak %{
@@ -61,6 +62,7 @@ add-highlighter global/line-wrap wrap
 plug "TeddyDD/kakoune-selenized" theme
 plug "Delapouite/kakoune-colors" theme
 plug "evanrelf/primer.kak" theme
+plug "caksoylar/kakoune-snow" theme
 plug "rubberydub/nord-kakoune" theme
 plug "caksoylar/kakoune-mysticaltutor" theme config %{
     %sh{
