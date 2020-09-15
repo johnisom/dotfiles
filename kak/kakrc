@@ -31,7 +31,7 @@ plug "alexherbo2/move-line.kak" config %{
 
 plug "andreyorst/powerline.kak" config %{
     %sh{
-        if [[ $TERM == "linux" ]]; then
+        if [ $TERM = "linux" ]; then
             echo nop
         else
             echo powerline-start
@@ -39,9 +39,45 @@ plug "andreyorst/powerline.kak" config %{
     }
 }
 
+# # kak-lsp
+# plug "ul/kak-lsp" do %{
+#     cargo build --release --locked
+#     cargo install --force --path .
+# } config %{
+#     set global lsp_diagnostic_line_error_sign '║'
+#     set global lsp_diagnostic_line_warning_sign '┊'
+# }
+
+# # Snippets
+# plug "alexherbo2/snippets.kak" config %{
+#     set-option global snippets_scope global
+#     map global user -docstring 'Edit snippets' / ': snippets-edit<ret>'
+#     map global insert <ret> '<a-;>: snippets-enter auto-pairs-insert-new-line<ret>'
+#     hook global BufCreate '.+/\.?config/snippets/.+' %{
+#         set-option buffer indentwidth 0
+#     }
+# }
+
+# # phantom.kak (idk what it does)
+# plug "alexherbo2/phantom.kak"
+
+# # terminal-mode.kak
+# plug "alexherbo2/terminal-mode.kak" config %{
+#     map global normal -docstring 'Terminal' <c-w> ': enter-user-mode terminal<ret>'
+# }
+
+# # connect.kak
+# plug "alexherbo2/connect.kak"
+
+# # batch.kak
+# plug "alexherbo2/batch.kak"
+
+# # explore.kak
+# plug "alexherbo2/explore.kak"
+
 # Indent Width
 set-option global indentwidth 2
-hook global WinSetOption filetype=kak %{
+hook global WinSetOption filetype=(kak|css) %{
     set-option window indentwidth 4
 }
 
@@ -66,7 +102,7 @@ plug "caksoylar/kakoune-snow" theme
 plug "rubberydub/nord-kakoune" theme
 plug "caksoylar/kakoune-mysticaltutor" theme config %{
     %sh{
-        if [[ $TERM == "linux" ]]; then
+        if [ $TERM = "linux" ]; then
             echo nop
         else
             echo colorscheme
@@ -81,4 +117,13 @@ plug "jordan-yee/kakoune-mysticaltutor-powerline" defer powerline %{
 # Javascript & JSX format
 hook global WinSetOption filetype=javascript %{
     set-option buffer formatcmd 'prettier --parser babel'
+}
+
+# HTML format
+hook global WinSetOption filetype=html %{
+    set-option buffer formatcmd 'prettier --parser html'
+}
+
+hook global WinCreate .* %{
+    set-option global termcmd 'tilix -a app-new-session -e'
 }
