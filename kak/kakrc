@@ -13,18 +13,26 @@ plug "andreyorst/smarttab.kak" defer smarttab %{
 } config %{
     hook global WinSetOption filetype=(.*) expandtab
 }
-
 ## prelude -- Prelude of shell blocks for Kakoune
+
 plug "alexherbo2/prelude.kak"
 
 ## auto-pairs -- Auto-paired characters for Kakoune
-plug "alexherbo2/auto-pairs.kak"
+plug "alexherbo2/auto-pairs.kak" config %{
+    require-module auto-pairs
+
+    auto-pairs-enable
+}
 
 ## surround -- Surround pairs as-you-type for Kakoune
-plug "alexherbo2/surround.kak"
+plug "alexherbo2/surround.kak" config %{
+    require-module surround
+}
 
 ## move-line -- Kakoune plugin to move lines without `xdp`
 plug "alexherbo2/move-line.kak" config %{
+    require-module move-line
+
     map global normal "'" ': move-line-below<ret>'
     map global normal "<a-'>" ': move-line-above<ret>'
 }
