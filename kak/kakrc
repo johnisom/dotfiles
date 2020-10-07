@@ -7,7 +7,7 @@ plug "robertmeta/plug.kak" noload
 ## smarttab -- Automatic handling different styles of indentation and alignment
 plug "andreyorst/smarttab.kak" defer smarttab %{
     set-option global softtabstop 2
-    hook global WinSetOption filetype=kak %{
+    hook global WinSetOption filetype=(kak|css|python) %{
         set-option window softtabstop 4
     }
 } config %{
@@ -85,7 +85,7 @@ plug "andreyorst/powerline.kak" config %{
 
 # Indent Width
 set-option global indentwidth 2
-hook global WinSetOption filetype=(kak|css) %{
+hook global WinSetOption filetype=(kak|css|python) %{
     set-option window indentwidth 4
 }
 
