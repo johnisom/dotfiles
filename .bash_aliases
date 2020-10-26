@@ -14,9 +14,9 @@ alias ....='cdls ../..'
 alias cll='cdll'
 alias mc='mdcd'
 
-alias embash='emc $HOME/.bashrc'
-alias emalias='emc $HOME/.bash_aliases'
-alias emfunc='emc $HOME/.bash_functions'
+alias kakbash='kak $HOME/.bashrc'
+alias kakalias='kak $HOME/.bash_aliases'
+alias kakfunc='kak $HOME/.bash_functions'
 
 alias nbash='nano $HOME/.bashrc'
 alias nalias='nano $HOME/.bash_aliases'
@@ -47,36 +47,3 @@ alias gd='git diff'
 alias gfl='git reflog'
 
 alias gsc='git-sed-commit'
-
-alias lsc='cdls $HOME/development/LS/Capstone/'
-alias LS='lsc'
-
-alias emct="emacsclient -t"
-alias emc="emct"
-alias emcw="emacsclient -c"
-alias emd="emacs --daemon"
-alias kill-emacs-daemon="emacsclient -e \"(kill-emacs)\""
-alias kemd="kill-emacs-daemon"
-# kemd is k added to emsd, standing for (k)ill (em)acs (d)aemon
-
-alias tmv="tm view 1"
-
-# Because it's easier to type
-alias py="python3"
-
-# ddgr (duckduckgoer) with only 4 results per page
-alias ddg="ddgr -n 4"
-
-# restart spotifyd service
-alias rs="systemctl --user restart spotifyd.service"
-alias rspt="rs && spt"
-
-# restart picom (current version has memory leak)
-alias rpicom="killall -wq picom; picom -b"
-
-# start picom for good minecraft configuration
-alias mpicom="picom --config /dev/null --backend glx --vsync -b"
-
-# For the linux tty
-alias tty-rigel="setvtrgb $HOME/rigel-vtrgb && clear"
-alias tty-normal="setvtrgb /etc/console-setup/vtrgb && clear"
