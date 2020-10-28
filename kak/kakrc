@@ -37,15 +37,15 @@ plug "alexherbo2/move-line.kak" config %{
     map global normal "<a-'>" ': move-line-above<ret>'
 }
 
-plug "andreyorst/powerline.kak" config %{
-    %sh{
-        if [ $TERM = "linux" ]; then
-            echo nop
-        else
-            echo powerline-start
-        fi
-    }
-}
+# plug "andreyorst/powerline.kak" config %{
+#     %sh{
+#         if [ $TERM = "linux" ]; then
+#             echo nop
+#         else
+#             echo powerline-start
+#         fi
+#     }
+# }
 
 # # kak-lsp
 # plug "ul/kak-lsp" do %{
@@ -130,8 +130,4 @@ hook global WinSetOption filetype=javascript %{
 # HTML format
 hook global WinSetOption filetype=html %{
     set-option buffer formatcmd 'prettier --parser html'
-}
-
-hook global WinCreate .* %{
-    set-option global termcmd 'tilix -a app-new-session -e'
 }
