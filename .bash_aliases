@@ -47,3 +47,6 @@ alias gd='git diff'
 alias gfl='git reflog'
 
 alias gsc='git-sed-commit'
+
+alias work='cdls $HOME/development/work/reamaze'
+alias work6='cdls $HOME/development/work/reamaze-roadmap'

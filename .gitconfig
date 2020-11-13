@@ -7,3 +7,5 @@
 	email = John.Isom2001@gmail.com
 [pull]
 	rebase = false
+[includeIf "gitdir:~/development/work/"]
+	path = ~/development/work/.gitconfig

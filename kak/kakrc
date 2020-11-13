@@ -91,15 +91,16 @@ hook global WinSetOption filetype=(kak|css|python) %{
 
 # Highlighters
 
-hook global ModeChange push:normal:insert %{
-    add-highlighter -override window/line-numbers number-lines -hlcursor
-}
+# hook global ModeChange push:normal:insert %{
+#     add-highlighter -override window/line-numbers number-lines -hlcursor
+# }
 
-hook global ModeChange pop:insert:normal %{
-    add-highlighter -override window/line-numbers number-lines -hlcursor -relative
-}
+# hook global ModeChange pop:insert:normal %{
+#     add-highlighter -override window/line-numbers number-lines -hlcursor -relative
+# }
 
-add-highlighter global/line-numbers number-lines -hlcursor -relative
+# add-highlighter global/line-numbers number-lines -hlcursor -relative
+add-highlighter global/line-numbers number-lines -hlcursor
 add-highlighter global/line-wrap wrap
 
 # Colorschemes
