@@ -3,8 +3,7 @@
 
 cdls () {
     if [ -d "$1" ]; then
-        cd "$1" || exit
-        ls
+        cd "$1" && ls
     else
         echo "$1": directory not found
     fi
@@ -20,17 +19,14 @@ cdll () {
 }
 
 mdcd () {
-    mkdir "$1"
-    cd "$1" || exit
+    mkdir "$1" && cd "$1"
 }
 
 git-add-commit () {
     if [ "$2" ]; then
-        git add "$1"
-        git commit "$2" "$3"
+        git add "$1" && git commit "$2" "$3"
     else
-        git add "$1"
-        git commit
+        git add "$1" && git commit
     fi
 }
 
