@@ -103,4 +103,4 @@ shopt -s globstar
 
 export VISUAL="kak"
 export EDITOR="kak"
-
+export PATH="$PATH:$HOME/.local/bin"

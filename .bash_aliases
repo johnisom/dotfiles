@@ -49,4 +49,5 @@ alias gfl='git reflog'
 alias gsc='git-sed-commit'
 
 alias work='cdls $HOME/development/work/reamaze'
-alias work6='cdls $HOME/development/work/reamaze-roadmap'
+
+alias note='gedit $HOME/Desktop/notes.txt & > /dev/null 2>&1'
