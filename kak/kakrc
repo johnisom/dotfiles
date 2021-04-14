@@ -37,51 +37,51 @@ plug "alexherbo2/move-line.kak" config %{
     map global normal "<a-'>" ': move-line-above<ret>'
 }
 
-# plug "andreyorst/powerline.kak" config %{
-#     %sh{
-#         if [ $TERM = "linux" ]; then
-#             echo nop
-#         else
-#             echo powerline-start
-#         fi
-#     }
-# }
+plug "andreyorst/powerline.kak" config %{
+    # %sh{
+    #     if [ $TERM = "linux" ]; then
+    #         echo nop
+    #     else
+    #         echo powerline-start
+    #     fi
+    # }
+}
 
-# # kak-lsp
-# plug "ul/kak-lsp" do %{
-#     cargo build --release --locked
-#     cargo install --force --path .
-# } config %{
-#     set global lsp_diagnostic_line_error_sign '║'
-#     set global lsp_diagnostic_line_warning_sign '┊'
-# }
+# kak-lsp
+plug "ul/kak-lsp" do %{
+    cargo build --release --locked
+    cargo install --force --path .
+} config %{
+    set global lsp_diagnostic_line_error_sign '║'
+    set global lsp_diagnostic_line_warning_sign '┊'
+}
 
-# # Snippets
-# plug "alexherbo2/snippets.kak" config %{
-#     set-option global snippets_scope global
-#     map global user -docstring 'Edit snippets' / ': snippets-edit<ret>'
-#     map global insert <ret> '<a-;>: snippets-enter auto-pairs-insert-new-line<ret>'
-#     hook global BufCreate '.+/\.?config/snippets/.+' %{
-#         set-option buffer indentwidth 0
-#     }
-# }
+# Snippets
+plug "alexherbo2/snippets.kak" config %{
+    set-option global snippets_scope global
+    map global user -docstring 'Edit snippets' / ': snippets-edit<ret>'
+    map global insert <ret> '<a-;>: snippets-enter auto-pairs-insert-new-line<ret>'
+    hook global BufCreate '.+/\.?config/snippets/.+' %{
+        set-option buffer indentwidth 0
+    }
+}
 
-# # phantom.kak (idk what it does)
-# plug "alexherbo2/phantom.kak"
+# phantom.kak (idk what it does)
+plug "alexherbo2/phantom.kak"
 
-# # terminal-mode.kak
-# plug "alexherbo2/terminal-mode.kak" config %{
-#     map global normal -docstring 'Terminal' <c-w> ': enter-user-mode terminal<ret>'
-# }
+# terminal-mode.kak
+plug "alexherbo2/terminal-mode.kak" config %{
+    map global normal -docstring 'Terminal' <c-w> ': enter-user-mode terminal<ret>'
+}
 
-# # connect.kak
-# plug "alexherbo2/connect.kak"
+# connect.kak
+plug "alexherbo2/connect.kak"
 
-# # batch.kak
-# plug "alexherbo2/batch.kak"
+# batch.kak
+plug "alexherbo2/batch.kak"
 
-# # explore.kak
-# plug "alexherbo2/explore.kak"
+# explore.kak
+plug "alexherbo2/explore.kak"
 
 # Indent Width
 set-option global indentwidth 2
