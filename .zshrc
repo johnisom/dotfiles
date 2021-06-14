@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="$HOME/.chefdk/gem/ruby/2.6.0/bin:/usr/local/opt/ruby/bin:$PATH"
+
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
 fi
@@ -111,3 +113,8 @@ fi
 export VISUAL="kak"
 export EDITOR="kak"
 
+# work stuff
+ssh-add
+source ~/development/work/reamaze-shh/reamaze/.deploy-env
+export DEPLOY_SLACK_WEBHOOK
+export NODEBALANCER_TOKEN

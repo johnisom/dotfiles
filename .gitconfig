@@ -4,10 +4,12 @@
 	helper = store
 [user]
 	name = John Isom
-	email = John.Isom2001@gmail.com
+	email = john@reamaze.com
 [pull]
 	rebase = false
 [includeIf "gitdir:~/development/work/"]
 	path = ~/development/work/.gitconfig
 	name = John Isom
 	email = john@reamaze.com
+[diff]
+	mnemonicprefix = false
